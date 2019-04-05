@@ -31,14 +31,14 @@ public class MenuDisconnectActivity extends AppCompatActivity implements View.On
                 startActivity(new Intent(MenuDisconnectActivity.this, CarActivity.class));
             }
         });
-
-
-
+        final ImageButton radio_button = findViewById(R.id.radio);
+        radio_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MenuDisconnectActivity.this, RadioActivity2.class));
+            }
+        });
     }
-
-
     @Override
     public void onClick(View view) {
-
     }
 }

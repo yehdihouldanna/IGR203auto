@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bluetooth_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Bluetooth=true;
-                startActivity(new Intent(MainActivity.this, BluetoothActivity.class));
+                startActivity(new Intent(MainActivity.this, MenuBluetooth.class));
             }
         });
         final ImageButton nobluetooth_button = findViewById(R.id.nobluetooth);
@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
     }
-
 
     @Override
     public void onClick(View view) {
