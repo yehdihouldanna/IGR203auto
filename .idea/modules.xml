@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AutoCarPlus.iml" filepath="$PROJECT_DIR$/AutoCarPlus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IGR203auto.iml" filepath="$PROJECT_DIR$/IGR203auto.iml" />
       <module fileurl="file://$PROJECT_DIR$/mobile/mobile.iml" filepath="$PROJECT_DIR$/mobile/mobile.iml" />
     </modules>
   </component>
