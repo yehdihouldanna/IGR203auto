@@ -11,6 +11,9 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.app.Activity;
+import android.widget.ArrayAdapter;
+
 public class MusicActivity extends AppCompatActivity implements View.OnClickListener{
 
 
@@ -19,8 +22,8 @@ public class MusicActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.musicactivity);
 
-        final ImageButton music_button = findViewById(R.id.returnmenu);
-        music_button.setOnClickListener(new View.OnClickListener() {
+        final ImageButton return_button = findViewById(R.id.returnmenu);
+        return_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(MusicActivity.this, MenuBluetooth.class));
             }

@@ -8,6 +8,7 @@ import android.widget.ImageButton;
 
 import static tpt.autocarplus.MainActivity.Bluetooth;
 
+//INUTILISÉ
 
 public class GearActivity extends AppCompatActivity implements View.OnClickListener{
 

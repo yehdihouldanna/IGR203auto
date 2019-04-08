@@ -19,12 +19,12 @@ public class MenuDisconnectActivity extends AppCompatActivity implements View.On
                 startActivity(new Intent(MenuDisconnectActivity.this, GpsActivity.class));
             }
         });
-        final ImageButton gear_button = findViewById(R.id.gear);
+        /*final ImageButton gear_button = findViewById(R.id.gear);
         gear_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(MenuDisconnectActivity.this, GearActivity.class));
             }
-        });
+        });*/
         final ImageButton car_button = findViewById(R.id.car);
         car_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

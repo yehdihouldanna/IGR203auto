@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import static tpt.autocarplus.MainActivity.Bluetooth;
+
 public class MenuBluetooth extends AppCompatActivity implements View.OnClickListener{
 
 
@@ -39,16 +41,23 @@ public class MenuBluetooth extends AppCompatActivity implements View.OnClickList
                 startActivity(new Intent(MenuBluetooth.this, BluetoothActivity.class));
             }
         });
-        final ImageButton gear_button = findViewById(R.id.gear);
+        /*final ImageButton gear_button = findViewById(R.id.gear);
         gear_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(MenuBluetooth.this, GearActivity.class));
             }
-        });
+        });*/
         final ImageButton car_button = findViewById(R.id.car);
         car_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(MenuBluetooth.this, CarActivity.class));
+            }
+        });
+
+        final ImageButton return_button = findViewById(R.id.returnmenu);
+        return_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MenuBluetooth.this, MainActivity.class));
             }
         });
 
