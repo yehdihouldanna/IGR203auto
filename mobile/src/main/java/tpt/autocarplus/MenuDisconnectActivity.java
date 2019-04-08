@@ -37,6 +37,12 @@ public class MenuDisconnectActivity extends AppCompatActivity implements View.On
                 startActivity(new Intent(MenuDisconnectActivity.this, RadioActivity2.class));
             }
         });
+        final ImageButton return_button = findViewById(R.id.returnmenu);
+        return_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                    startActivity(new Intent(MenuDisconnectActivity.this, MenuBluetooth.class));
+            }
+        });
     }
     @Override
     public void onClick(View view) {
