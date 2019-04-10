@@ -23,7 +23,7 @@ public class Tweet {
         this.color = color;
         this.pseudo = pseudo;
         this.phoneNumber = phoneNumber;
-        this.text = "";
+        this.text = "   ";
     }
 
     public int getColorTweet(){
@@ -35,5 +35,9 @@ public class Tweet {
     }
     public String gettextTweet(){
         return (this.text);
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 }

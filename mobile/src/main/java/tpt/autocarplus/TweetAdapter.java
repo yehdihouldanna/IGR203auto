@@ -41,6 +41,7 @@ public class TweetAdapter extends ArrayAdapter<Tweet> {
             viewHolder = new TweetViewHolder();
             viewHolder.pseudo = (TextView) convertView.findViewById(R.id.pseudo);
             viewHolder.text = (TextView) convertView.findViewById(R.id.text);
+            viewHolder.phoneNumber = (TextView) convertView.findViewById(R.id.phoneNumber);
             viewHolder.avatar = (ImageView) convertView.findViewById(R.id.avatar);
             convertView.setTag(viewHolder);
         }
@@ -52,6 +53,7 @@ public class TweetAdapter extends ArrayAdapter<Tweet> {
         //il ne reste plus qu'à remplir notre vue
         viewHolder.pseudo.setText(tweet.getpseudoTweet());
         viewHolder.text.setText(tweet.gettextTweet());
+        viewHolder.phoneNumber.setText(tweet.getPhoneNumber());
 
 
         return convertView;
@@ -60,6 +62,7 @@ public class TweetAdapter extends ArrayAdapter<Tweet> {
     private class TweetViewHolder{
         public TextView pseudo;
         public TextView text;
+        public TextView phoneNumber;
         public ImageView avatar;
         public ImageButton button;
     }

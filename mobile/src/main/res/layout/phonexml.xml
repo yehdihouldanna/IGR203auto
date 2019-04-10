@@ -20,4 +20,13 @@
         android:layout_marginStart="16dp"
         android:layout_toEndOf="@+id/text" />
 
+    <TextView
+        android:id="@+id/phoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/pseudo"
+        android:textStyle="bold"
+        tools:text="numéro" />
+
 </RelativeLayout>
