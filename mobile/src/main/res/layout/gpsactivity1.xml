@@ -17,7 +17,7 @@
             android:id="@+id/textIntro"
             android:layout_width="match_parent"
             android:layout_height="59dp"
-            android:text="Entrez la ville ou le code postal"
+            android:text="Entrez l'adresse"
             android:textSize="24sp" />
 
         <EditText
@@ -45,6 +45,14 @@
                 android:layout_weight="1"
                 android:background="@drawable/buttonshapestyle"
                 android:text="Ma liste" />
+
+            <Button
+                android:id="@+id/addToList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/buttonshapestyle"
+                android:text="Ajouter à ma liste" />
 
             <ImageButton
                 android:id="@+id/returnmenu"

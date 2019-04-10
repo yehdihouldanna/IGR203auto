@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RadioActivity4"></activity>
+        <activity android:name=".MyGPSList"></activity>
+        <activity android:name=".GpsActivity2" />
+        <activity android:name=".GpsActivity1" />
         <activity android:name=".RadioFavoriteList" />
         <activity android:name=".RadioActivity3" />
         <activity android:name=".RadioActivity2" />
@@ -32,6 +35,5 @@
             </intent-filter>
         </activity>
     </application>
-
 
 </manifest>

@@ -86,17 +86,17 @@
 
             <Button
                 android:id="@+id/addToList"
-                android:layout_width="wrap_content"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/buttonshapestyle"
-                android:text="Add to my list" />
+                android:text="Ajouter à ma liste" />
 
             <Button
                 android:id="@+id/myList"
-                android:layout_width="172dp"
+                android:layout_width="152dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/buttonshapestyle"
-                android:text="My list" />
+                android:text="Ma liste" />
 
             <ImageButton
                 android:id="@+id/returnmenu"

@@ -43,6 +43,7 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import static tpt.autocarplus.MainActivity.Bluetooth;
 
 public class RadioActivity3 extends AppCompatActivity implements View.OnClickListener, Serializable
       /*  MediaPlayer.OnCompletionListener, MediaPlayer.OnPreparedListener,
@@ -158,7 +159,12 @@ public class RadioActivity3 extends AppCompatActivity implements View.OnClickLis
         final ImageButton return_button = findViewById(R.id.returnmenu);
         return_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(RadioActivity3.this, MenuDisconnectActivity.class));
+                if (Bluetooth){
+                    startActivity(new Intent(RadioActivity3.this, MenuBluetooth.class));
+                }
+                else {
+                    startActivity(new Intent(RadioActivity3.this, MenuDisconnectActivity.class));
+                }
             }
         });
 
