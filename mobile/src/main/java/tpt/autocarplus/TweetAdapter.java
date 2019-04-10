@@ -1,13 +1,20 @@
 package tpt.autocarplus;
 
+import android.Manifest;
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -54,6 +61,14 @@ public class TweetAdapter extends ArrayAdapter<Tweet> {
         viewHolder.pseudo.setText(tweet.getpseudoTweet());
         viewHolder.text.setText(tweet.gettextTweet());
         viewHolder.phoneNumber.setText(tweet.getPhoneNumber());
+        final String phoneNumber = tweet.getPhoneNumber();
+        final Button button = convertView.findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                ContactActivity.numberToCall=phoneNumber;
+
+            }
+        });
 
 
         return convertView;

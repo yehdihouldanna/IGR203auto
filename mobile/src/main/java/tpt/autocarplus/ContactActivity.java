@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -23,6 +24,8 @@ public class ContactActivity extends AppCompatActivity implements View.OnClickLi
 
     private ListView mListView;
 
+    public static String numberToCall="";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,13 +40,30 @@ public class ContactActivity extends AppCompatActivity implements View.OnClickLi
         final ImageButton validate_button = findViewById(R.id.validate);
         validate_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(ContactActivity.this, MainActivity.class));
+                if (ContextCompat.checkSelfPermission(ContactActivity.this,
+                        Manifest.permission.CALL_PHONE)
+                        != PackageManager.PERMISSION_GRANTED) {
+
+                    {
+                    ActivityCompat.requestPermissions(ContactActivity.this,
+                                new String[]{Manifest.permission.CALL_PHONE},
+                                1);
+
+                    }
+                }
+
+                if (numberToCall!="") {
+                    Intent i = new Intent(Intent.ACTION_CALL);
+                    i.setData(Uri.parse("tel:"+numberToCall));
+                    startActivity(i);
+                }
+
             }
         });
         final ImageButton return_button = findViewById(R.id.returnmenu);
         return_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(ContactActivity.this, MainActivity.class));
+                startActivity(new Intent(ContactActivity.this, MenuBluetooth.class));
             }
         });
 
@@ -64,14 +84,9 @@ public class ContactActivity extends AppCompatActivity implements View.OnClickLi
                 != PackageManager.PERMISSION_GRANTED) {
 
             {
-                // No explanation needed; request the permission
                 ActivityCompat.requestPermissions(this,
                         new String[]{Manifest.permission.READ_CONTACTS},
                         1);
-
-                // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
-                // app-defined int constant. The callback method gets the
-                // result of the request.
             }
         }
 

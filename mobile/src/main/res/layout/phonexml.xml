@@ -6,12 +6,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="10dp">
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="281dp"
+        android:layout_height="wrap_content"
+        android:background="#8FFFFFFA"
+        android:text="" />
+
     <ImageView android:id="@+id/avatar" app:srcCompat="@drawable/phone" android:layout_width="50dp" android:layout_height="50dp"  />
 
     <TextView android:id="@+id/pseudo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@android:color/black" android:layout_marginLeft="10dp" android:layout_toRightOf="@+id/avatar" android:layout_alignTop="@+id/avatar" android:textStyle="bold" tools:text="Pseudo" />
 
     <TextView android:id="@+id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@android:color/black" android:layout_alignLeft="@+id/pseudo" android:layout_below="@+id/pseudo" tools:text="Texte de mon tweet" />
-
+    <!--
     <RadioButton
         android:id="@+id/radioButton2"
         android:layout_width="wrap_content"
@@ -19,6 +26,7 @@
         android:layout_centerVertical="true"
         android:layout_marginStart="16dp"
         android:layout_toEndOf="@+id/text" />
+    -->
 
     <TextView
         android:id="@+id/phoneNumber"
