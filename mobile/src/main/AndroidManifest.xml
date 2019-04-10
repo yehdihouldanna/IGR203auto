@@ -10,24 +10,25 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".RadioActivity4"></activity>
-        <activity android:name=".RadioFavoriteList" />
-        <activity android:name=".RadioActivity3" />
+        android:theme="@style/AppTheme"
+        android:screenOrientation="landscape">
+        <activity android:name=".RadioActivity4" android:screenOrientation="landscape"></activity>
+        <activity android:name=".RadioFavoriteList" android:screenOrientation="landscape" />
+        <activity android:name=".RadioActivity3" android:screenOrientation="landscape" />
         <activity android:name=".RadioActivity2" />
-        <activity android:name=".RadioActivity" />
-        <activity android:name=".GearActivity" />
-        <activity android:name=".CarActivity" />
-        <activity android:name=".BluetoothActivity" />
-        <activity android:name=".MenuDisconnectActivity" />
-        <activity android:name=".ContactActivity" />
-        <activity android:name=".MusicActivity" />
-        <activity android:name=".GpsActivity" />
-        <activity android:name=".MenuBluetooth" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".RadioActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".GearActivity" android:screenOrientation="landscape"
+            />
+        <activity android:name=".CarActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".BluetoothActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".MenuDisconnectActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".ContactActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".MusicActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".GpsActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".MenuBluetooth" android:screenOrientation="landscape"/>
+        <activity android:name=".MainActivity" android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
