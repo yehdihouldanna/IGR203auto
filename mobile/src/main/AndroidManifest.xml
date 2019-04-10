@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RadioActivity2"></activity>
+        <activity android:name=".RadioFavoriteList"></activity>
+        <activity android:name=".RadioActivity3" />
+        <activity android:name=".RadioActivity2" />
         <activity android:name=".RadioActivity" />
         <activity android:name=".GearActivity" />
         <activity android:name=".CarActivity" />
