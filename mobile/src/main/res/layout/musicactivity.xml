@@ -8,12 +8,12 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="300dp"
         android:orientation="vertical">
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="268dp">
+            android:layout_height="150dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -100,29 +100,29 @@
                     android:background="@drawable/buttonshapestyle"
                     android:orientation="horizontal">
 
-                    <ImageView
+                    <ImageButton
                         android:id="@+id/imageView2"
-                        android:layout_width="wrap_content"
+                        android:layout_width="107dp"
                         android:layout_height="wrap_content"
                         android:layout_alignTop="@+id/imageView"
                         android:layout_alignEnd="@+id/music"
                         android:background="@drawable/buttonshapestyle"
                         app:srcCompat="@android:drawable/ic_media_previous" />
 
-                    <ImageView
+                    <ImageButton
                         android:id="@+id/play"
-                        android:layout_width="wrap_content"
+                        android:layout_width="71dp"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/text"
                         android:layout_centerHorizontal="true"
 
                         android:background="@drawable/buttonshapestyle"
-                        app:srcCompat="@android:drawable/ic_media_play" />
+                         />
 
 
-                    <ImageView
+                    <ImageButton
                         android:id="@+id/imageView3"
-                        android:layout_width="wrap_content"
+                        android:layout_width="114dp"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/music"
                         android:layout_alignParentEnd="true"

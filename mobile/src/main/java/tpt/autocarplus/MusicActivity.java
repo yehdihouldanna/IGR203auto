@@ -20,7 +20,7 @@ public class MusicActivity extends AppCompatActivity implements View.OnClickList
 
     // pour changer l'icon du bouton play quand elle est pressée
 
-    Button mPlayButton;
+    ImageButton mPlayButton;
 
     boolean isPlay = false;
 
@@ -37,27 +37,28 @@ public class MusicActivity extends AppCompatActivity implements View.OnClickList
         });
 
 
-//        mPlayButton = (Button) findViewById(R.id.play);
-//        mPlayButton.setOnClickListener(mTogglePlayButton);
+        mPlayButton = findViewById(R.id.play);
+        mPlayButton.setBackgroundResource(android.R.drawable.ic_media_play);
+        mPlayButton.setOnClickListener(mTogglePlayButton);
     }
 
-//    View.OnClickListener mTogglePlayButton = new View.OnClickListener(){
-//
-//        @Override
-//        public void onClick(View v){
-//            // change your button background
-//            isPlay = !isPlay; // reverse
-//            if(isPlay){
-//                v.setBackgroundResource(android.R.drawable.ic_media_play);
-//            }else{
-//                //v.setImageResource(android.R.drawable.ic_media_pause);
-//                v.setBackgroundResource(android.R.drawable.ic_media_pause);
-//            }
-//
-//
-//        }
-//
-//    };
+    View.OnClickListener mTogglePlayButton = new View.OnClickListener(){
+
+        @Override
+        public void onClick(View v){
+            // change your button background
+            isPlay = !isPlay; // reverse
+            if(!isPlay){
+                v.setBackgroundResource(android.R.drawable.ic_media_play);
+            }else{
+                //v.setImageResource(android.R.drawable.ic_media_pause);
+                v.setBackgroundResource(android.R.drawable.ic_media_pause);
+            }
+
+
+        }
+
+    };
 
     @Override
     public void onClick(View view) {
