@@ -37,7 +37,7 @@
                 android:layout_width="221dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/buttonshapestyle"
-                android:text="Remove from list" />
+                android:text="Retirer de la liste" />
 
 
             <ImageButton
