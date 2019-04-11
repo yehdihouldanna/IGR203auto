@@ -23,7 +23,6 @@ import java.util.Vector;
 
 import static tpt.autocarplus.GpsActivity1.addressListVector;
 import static tpt.autocarplus.GpsActivity1.addressToSend;
-import static tpt.autocarplus.RadioActivity3.favoriteListMap;
 
 public class MyGPSList extends AppCompatActivity implements View.OnClickListener{
 

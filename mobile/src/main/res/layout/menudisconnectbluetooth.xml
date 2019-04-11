@@ -64,7 +64,7 @@
                 android:background="@drawable/buttonshapestyle"
                 app:layout_constraintStart_toEndOf="@+id/car"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/map" />
+                app:srcCompat="@drawable/gps" />
 
         </LinearLayout>
 

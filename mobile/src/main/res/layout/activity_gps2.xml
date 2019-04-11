@@ -1,9 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".GpsActivity2">
+    android:layout_width="wrap_content"
+    android:layout_height="300dp"
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="315dp"
+            android:layout_height="108dp"
+            android:layout_weight="1"
+            android:text="TextView" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="500dp"
+            android:layout_height="178dp"
+            app:srcCompat="@drawable/carte" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/newItinerary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshapestyle"
+            android:text="Modifier l'itinéraire" />
+
+        <Button
+            android:id="@+id/myList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshapestyle"
+            android:text="Ma liste" />
+
+        <Button
+            android:id="@+id/returnmainmenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshapestyle"
+            android:text="Terminer l'itinéraire" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import static tpt.autocarplus.GpsActivity1.whileItinerary;
 import static tpt.autocarplus.MainActivity.Bluetooth;
 
 public class GpsActivity extends AppCompatActivity implements View.OnClickListener{
@@ -22,7 +23,10 @@ public class GpsActivity extends AppCompatActivity implements View.OnClickListen
         final ImageButton return_button = findViewById(R.id.returnmenu);
         return_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (Bluetooth){
+                if (whileItinerary) {
+                    startActivity(new Intent(GpsActivity.this, GpsActivity2.class));
+                }
+                else if (Bluetooth){
                     startActivity(new Intent(GpsActivity.this, MenuBluetooth.class));}
                 else{
                     startActivity(new Intent(GpsActivity.this, MenuDisconnectActivity.class));}

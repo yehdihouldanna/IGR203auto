@@ -27,6 +27,7 @@ public class GpsActivity1 extends AppCompatActivity implements View.OnClickListe
     public static String finalAdress;
     public static Vector<String> addressListVector = new Vector<>();
     public static String addressToSend;
+    public static boolean whileItinerary=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +55,7 @@ public class GpsActivity1 extends AppCompatActivity implements View.OnClickListe
                 EditText fillText = findViewById(R.id.fillText);
                 finalAdress = fillText.getText().toString();
                 addressToSend = finalAdress + " " + GpsActivity.cityLocation;
+                whileItinerary=true;
                 startActivity(new Intent(GpsActivity1.this, GpsActivity2.class));
             }
         });
@@ -84,7 +86,8 @@ public class GpsActivity1 extends AppCompatActivity implements View.OnClickListe
                     FileOutputStream fos = getApplicationContext().openFileOutput("addressList", Context.MODE_PRIVATE);
                     ObjectOutputStream os = new ObjectOutputStream(fos);
 
-
+                    EditText fillText = findViewById(R.id.fillText);
+                    finalAdress = fillText.getText().toString();
                     addressListVector.add(finalAdress + " " + GpsActivity.cityLocation);
                     os.writeObject(addressListVector);
                     os.close();

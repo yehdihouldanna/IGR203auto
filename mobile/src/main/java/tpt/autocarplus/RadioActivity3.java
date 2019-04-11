@@ -57,7 +57,7 @@ public class RadioActivity3 extends AppCompatActivity implements View.OnClickLis
      private Button pause;
      private Button stop;
      private String[] list_des_radios;*/
-    private int i;
+    private int i=-1;
 
 
     public class StationButton implements Serializable {
@@ -179,41 +179,43 @@ public class RadioActivity3 extends AppCompatActivity implements View.OnClickLis
         add_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //on vérifie si le fichier existe
-               File favoriteList = getApplicationContext().getFileStreamPath("favoriteList");
-                if (favoriteList.exists() && favoriteList!=null) {
-                    try {
-                        FileInputStream fis = getApplicationContext().openFileInput("favoriteList");
-                        ObjectInputStream is = new ObjectInputStream(fis);
-                        favoriteListMap = (HashMap<Integer,StationButton>) is.readObject();
-                        is.close();
-                        fis.close();
+                if (i != -1) {
+                    File favoriteList = getApplicationContext().getFileStreamPath("favoriteList");
+                    if (favoriteList.exists() && favoriteList != null) {
+                        try {
+                            FileInputStream fis = getApplicationContext().openFileInput("favoriteList");
+                            ObjectInputStream is = new ObjectInputStream(fis);
+                            favoriteListMap = (HashMap<Integer, StationButton>) is.readObject();
+                            is.close();
+                            fis.close();
 
-                    } catch(FileNotFoundException e) {
+                        } catch (FileNotFoundException e) {
+                            e.printStackTrace();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        } catch (ClassNotFoundException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                    try {
+                        FileOutputStream fos = getApplicationContext().openFileOutput("favoriteList", Context.MODE_PRIVATE);
+                        ObjectOutputStream os = new ObjectOutputStream(fos);
+
+                        favoriteListMap.put(i, buttonList[i]);
+                        os.writeObject(favoriteListMap);
+                        os.close();
+                        fos.close();
+                        i = -1;
+
+
+                    } catch (FileNotFoundException e) {
                         e.printStackTrace();
-                    } catch(IOException e) {
-                        e.printStackTrace();
-                    } catch(ClassNotFoundException e) {
+                    } catch (IOException e) {
                         e.printStackTrace();
                     }
+
                 }
-
-                try {
-                    FileOutputStream fos = getApplicationContext().openFileOutput("favoriteList", Context.MODE_PRIVATE);
-                    ObjectOutputStream os = new ObjectOutputStream(fos);
-
-                    favoriteListMap.put(i,buttonList[i]);
-                    os.writeObject(favoriteListMap);
-                    os.close();
-                    fos.close();
-
-
-
-                } catch(FileNotFoundException e) {
-                    e.printStackTrace();
-                } catch(IOException e) {
-                    e.printStackTrace();
-                }
-
             }
         });
 /*

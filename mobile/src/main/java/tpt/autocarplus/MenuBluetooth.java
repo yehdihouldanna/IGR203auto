@@ -35,12 +35,13 @@ public class MenuBluetooth extends AppCompatActivity implements View.OnClickList
                 startActivity(new Intent(MenuBluetooth.this, ContactActivity.class));
             }
         });
+        /*
         final ImageButton bluetooth_button = findViewById(R.id.bluetooth);
         bluetooth_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(MenuBluetooth.this, BluetoothActivity.class));
             }
-        });
+        });*/
         final ImageButton radio_button = findViewById(R.id.radio);
         radio_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

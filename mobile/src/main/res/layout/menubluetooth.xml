@@ -55,7 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="101dp"
                 android:background="@drawable/buttonshapestyle"
-                app:srcCompat="@drawable/map" />
+                app:srcCompat="@drawable/gps" />
 
 
         </LinearLayout>
@@ -91,14 +91,6 @@
             android:layout_margin="20dp"
             android:gravity="left"
             android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/bluetooth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/buttonshapestyle"
-                app:srcCompat="@drawable/bluetooth" />
 
             <ImageButton
                 android:id="@+id/radio"
