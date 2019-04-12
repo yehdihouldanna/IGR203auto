@@ -186,6 +186,9 @@ public class RadioActivity3 extends AppCompatActivity implements View.OnClickLis
                             FileInputStream fis = getApplicationContext().openFileInput("favoriteList");
                             ObjectInputStream is = new ObjectInputStream(fis);
                             favoriteListMap = (HashMap<Integer, StationButton>) is.readObject();
+                            //note : j'ai remarqué un problème que je n'arrive pas à comprendre sur la
+                            //ligne au dessus: après l'utilisation de RadioActivity3 et de GpsActivity1,
+                            //le fichier "favoriteList" est considéré comme un "Vector"
                             is.close();
                             fis.close();
 
